@@ -1,8 +1,6 @@
 <?php
 //% $_SERVER
-/* echo '<pre>';
-print_r($_SERVER);
-echo '</pre>'; */
+//echo '<pre>'; print_r($_SERVER); echo '</pre>';
 
 //* Ottenere l'URL della pagina corrente
 /* $current_url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
