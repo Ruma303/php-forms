@@ -13,7 +13,7 @@ function test() {
 
 
 //% $_GET
-var_dump($_GET);
+//var_dump($_GET);
 //echo "Nome: {$_GET['name']}, Cognome {$_GET['lastname']}.";
 // Nome: Matteo, Cognome Russo
 
@@ -65,20 +65,27 @@ var_dump($_GET);
         <button type="reset">Reset</button>
     </form>
     <?php
-    if (!empty($_POST)) {
-        $name_safe = htmlspecialchars($_POST['name']);
-        echo $name_safe;
-        //exit();
+    /* if (!empty($_POST)) {
         var_dump($_POST);
         extract($_POST);
         $response = <<<Text
         <h2>Dati utente</h2>
         Nome: <b>$name</b> Cognome: <b>$lastname</b></p>
         Text;
+    } */
+
+    /* //, Form safe */
+    if (!empty($_POST)) {
+        $safeName = htmlspecialchars($_POST['name']);
+        $safeLastName = htmlspecialchars($_POST['lastname']);
+        var_dump($_POST);
+        $response = <<<Text
+        <h2>Dati utente</h2>
+        Nome: <b>$safeName</b> Cognome: <b>$safeLastName</b></p>
+        Text;
         echo $response;
-    }
-    ?>
-    <!--  &ltscript&gtalert(&#039Ciao&#039)&lt/script&gt -->
+    }?>
+    <p>&ltscript&gtalert(&#039Ciao&#039)&lt/script&gt</p>
 </body>
 </html>
 
