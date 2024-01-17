@@ -10,6 +10,7 @@ echo "L'URL corrente è: $current_url"; */
 /* $request_method = $_SERVER['REQUEST_METHOD'];
 echo "Il metodo di richiesta è: $request_method"; */
 
+
 //% $_REQUEST
 ?>
 
@@ -21,7 +22,7 @@ echo "Il metodo di richiesta è: $request_method"; */
     <title>Live Coding: php-forms</title>
 </head>
 <body>
-    <form action=<?php echo $_SERVER['PHP_SELF']; ?> method="POST">
+    <form action=<?= $_SERVER['PHP_SELF']; ?> method="POST">
         Name: <input type="text" name="name"><br>
         Age: <input type="number" name="age">
         <input type="submit">
@@ -32,6 +33,7 @@ echo "Il metodo di richiesta è: $request_method"; */
         $age = $_REQUEST['age'];
         echo "Name: " . $name . '<br>';
         echo "Age: " . $age . '<br>';
+        echo $_SERVER['PHP_SELF'];
     } */
     ?>
 <!-- </body>
